@@ -1,0 +1,27 @@
+@import 'tailwindcss';
+
+@theme inline {
+    --font-sans:
+        ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+@layer base {
+    * {
+        @apply box-border m-0 p-0;
+    }
+
+    body {
+        @apply bg-gray-50 font-sans antialiased;
+    }
+}
+
+@layer components {
+    .scrollbar-hide {
+        scrollbar-width: none;
+    }
+
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+}
